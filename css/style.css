@@ -1,6 +1,6 @@
 .card {
     height: 80vh;
-    width: 30vw;
+    width: 20vw;
 }
 
 .headContainer {
@@ -8,12 +8,12 @@
 }
 
 #next {
-    width: 22vw;
+    width: 15vw;
 }
 
 #resetBtn {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 5vw;
     height: 5vh;
 }
