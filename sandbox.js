@@ -15,12 +15,13 @@ const pages = [
     exampleText: 'New exampleText'
 }
 ]
+function update(){
 headText.innerText = pages[i].headText
-// exampleText.innerText = pages[i]
-
+example.innerText = pages[i].exampleText
+}
 nextBtn.addEventListener('click', () => {
 i++;
-console.log(i)
-headText.innerText = pages[i].headText
+// console.log(i)
+update()
 })
-
+update()
