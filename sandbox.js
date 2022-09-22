@@ -10,7 +10,7 @@ const pages = [
     headText: 'I can read your mind',
 
     exampleText: '',
-    resetBtn: 'GO'
+    resetBtn: '<i class="">GO</i>'
 
 },
 {
@@ -48,7 +48,7 @@ const pages = [
 const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
 // console.log(symbols[2])
 let keySymbol = symbols[Math.floor(Math.random() * 9)]
-// console.log(keySymbol)
+console.log(keySymbol)
 
 
 function increment(){
