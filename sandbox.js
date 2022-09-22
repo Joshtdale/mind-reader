@@ -39,11 +39,14 @@ const pages = [
 },
 {
     headText: '',
-    nextBtn: 'REVEAL',
-    exampleText: 'Your symbol is:\n${}',
+    nextBtn: '',
+    exampleText: 'Your symbol is:',
     resetBtn: ''
 },
 ]
+
+const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+// console.log(symbols[2])
 
 function increment(){
     i++;
@@ -51,9 +54,14 @@ function increment(){
     update()
 }
 
+function reset(){
+    i = 0;
+    update()
+}
+
 function update(){
     
-if (i === 0){
+if (i === 0 || i === 5){
     nextBtn.style.display = 'none';
     console.log('i = 0')
 } else {
@@ -70,6 +78,8 @@ resetBtn.innerText = pages[i].resetBtn
 resetBtn.addEventListener('click', () => {
     if (i === 0){
         increment()
+    } else {
+        reset()
     }
 })
 
