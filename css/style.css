@@ -1,6 +1,15 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+
+h1 {
+    opacity: 0.6;
+}
+
 .card {
     height: 700px;
-    width: 300px;
+    width: 350px;
     border-radius: 0;
     margin-top: 15px;
 }
@@ -19,10 +28,6 @@
     border: 1px solid black;
     border-radius: 0;
     height: 7vh;
-}
-
-h1 {
-    opacity: 0.6;
 }
 
 #next {

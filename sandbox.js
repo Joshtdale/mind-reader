@@ -15,22 +15,34 @@ const pages = [
 },
 {
     headText: 'Pick a number from 01-99',
-    nextBtn: 'Next',
+    nextBtn: 'NEXT',
     exampleText: 'when you have your number\nclick next',
     resetBtn: ''
 },
 {
     headText: 'Add both digits together to get a new number',
-    nextBtn: 'Next',
+    nextBtn: 'NEXT',
     exampleText: 'Ex: 14 is 1 + 4 = 5\nClick next to proceed',
     resetBtn: ''
 },
 {
     headText: 'Subtract your new number from the original number',
-    nextBtn: 'Next',
-    exampleText: 'Ex: 14 - 5 = 9',
+    nextBtn: 'NEXT',
+    exampleText: 'Ex: 14 - 5 = 9\nclick next to proceed',
     resetBtn: ''
-}
+},
+{
+    headText: '',
+    nextBtn: 'REVEAL',
+    exampleText: 'Find your new number.\nNote the symbol beside the number',
+    resetBtn: ''
+},
+{
+    headText: '',
+    nextBtn: 'REVEAL',
+    exampleText: 'Your symbol is:\n${}',
+    resetBtn: ''
+},
 ]
 
 function increment(){
