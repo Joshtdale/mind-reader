@@ -47,6 +47,9 @@ const pages = [
 
 const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
 // console.log(symbols[2])
+let keySymbol = symbols[Math.floor(Math.random() * 9)]
+// console.log(keySymbol)
+
 
 function increment(){
     i++;
@@ -96,6 +99,9 @@ increment()
 
 function answerKey(){
     for(i = 0; i < 99; i++){
+        if (i % 9 === 0){
+            
+        }
         const key = document.createElement('p')
         headText.appendChild(key)
         key.innerText = i
