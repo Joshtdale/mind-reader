@@ -14,7 +14,7 @@
 <body>
 
     <div class="container card align-items-center">
-        <div class="headContainer text-center">
+        <div class="headContainer text-center overflow-auto">
             <h1 id="headText"></h1>
         </div>
 
@@ -25,9 +25,13 @@
     <div id="exampleContainer">
         <h3 id="example" class="text-info text-center mt-4"></h3>
     </div>
+
 <div class="bottomContainer position-relative container">
-    <button type="button" class="btn btn-outline-info" id="resetBtn"><i class="bi bi-arrow-counterclockwise"></i></button>
+    <div class="col position-absolute bottom-0 end-0">
+        <button type="button" class="btn btn-outline-info" id="resetBtn"></button>
+    </div>
 </div>
+
     <script src="/sandbox.js"></script>
 </div>
 </body>

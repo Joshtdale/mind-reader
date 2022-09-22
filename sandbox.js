@@ -17,35 +17,35 @@ const pages = [
     headText: 'Pick a number from 01-99',
     nextBtn: 'NEXT',
     exampleText: 'when you have your number\nclick next',
-    resetBtn: ''
+    resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
     headText: 'Add both digits together to get a new number',
     nextBtn: 'NEXT',
     exampleText: 'Ex: 14 is 1 + 4 = 5\nClick next to proceed',
-    resetBtn: ''
+    resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
     headText: 'Subtract your new number from the original number',
     nextBtn: 'NEXT',
     exampleText: 'Ex: 14 - 5 = 9\nclick next to proceed',
-    resetBtn: ''
+    resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
     headText: '',
     nextBtn: 'REVEAL',
     exampleText: 'Find your new number.\nNote the symbol beside the number',
-    resetBtn: ''
+    resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
     headText: '',
     nextBtn: '',
     exampleText: 'Your symbol is:',
-    resetBtn: ''
+    resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 ]
 
-const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
 // console.log(symbols[2])
 
 function increment(){
@@ -61,16 +61,16 @@ function reset(){
 
 function update(){
     
-if (i === 0 || i === 5){
-    nextBtn.style.display = 'none';
-    console.log('i = 0')
-} else {
+    if (i === 0 || i === 5){
+        nextBtn.style.display = 'none';
+        console.log('i = 0')
+    } else {
     nextBtn.style.display = 'block';
 }
-headText.innerText = pages[i].headText
-nextBtn.innerText = pages[i].nextBtn
-example.innerText = pages[i].exampleText
-resetBtn.innerText = pages[i].resetBtn
+    headText.innerText = pages[i].headText
+    nextBtn.innerText = pages[i].nextBtn
+    example.innerText = pages[i].exampleText
+    resetBtn.innerHTML = pages[i].resetBtn
 
 
 }
@@ -84,10 +84,26 @@ resetBtn.addEventListener('click', () => {
 })
 
 nextBtn.addEventListener('click', () => {
+    
     if (i > 0){
 increment()
-    }
+}
+    if (i === 5){
+    answerKey()
+}
+
 })
+
+function answerKey(){
+    for(i = 0; i < 99; i++){
+        const key = document.createElement('p')
+        headText.appendChild(key)
+        key.innerText = i
+    }
+    // update()
+
+}
+// answerKey()
 
 
 
