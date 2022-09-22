@@ -42,6 +42,7 @@ h1 {
 #resetBtn {
     background-color: white;
     border-radius: 30px;
+    margin: 20px;
     /* width: 4vw; */
     /* height: 7.5vh; */
 }
