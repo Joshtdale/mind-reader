@@ -1,6 +1,8 @@
 .card {
     height: 700px;
-    width: 20vw;
+    width: 300px;
+    border-radius: 0;
+    margin-top: 15px;
 }
 
 .headContainer {
