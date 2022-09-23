@@ -20,7 +20,7 @@ p {
 }
 
 .headContainer {
-    height: 700px;
+    height: 300px;
     margin: 30px;
 }
 
@@ -36,9 +36,9 @@ p {
     height: 7px;
 }
 
-.bottomContainer {
+/* .bottomContainer {
     height: 275px;
-}
+} */
 
 .bi-arrow-counterclockwise {
     font-size: 30px;
@@ -53,7 +53,14 @@ p {
     background-color: white;
     /* border-radius: 30px; */
     font-size: 17px;
-    margin: 20px;
-    width: 4.5vw;
-    height: 7.5vh;
+    /* margin: 20px; */
+    width: 50px;
+    height: 50px;
+}
+
+.footer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
 }
