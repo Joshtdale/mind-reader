@@ -7,6 +7,10 @@ h1 {
     opacity: 0.6;
 }
 
+p {
+    width: 300px;
+}
+
 .card {
     height: 700px;
     width: 350px;
@@ -15,7 +19,8 @@ h1 {
 }
 
 .headContainer {
-    height: 50vh;
+    height: 700px;
+    margin: 30px;
 }
 
 .text-info {
@@ -34,15 +39,20 @@ h1 {
     height: 275px;
 }
 
-#next {
+.bi-arrow-counterclockwise {
+    font-size: 30px;
+}
+
+.next {
     width: 275px;
     height: 60px;
 }
 
-#resetBtn {
+.resetBtn {
     background-color: white;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    font-size: 17px;
     margin: 20px;
-    /* width: 4vw; */
-    /* height: 7.5vh; */
+    width: 4.5vw;
+    height: 7.5vh;
 }
