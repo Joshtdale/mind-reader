@@ -2,8 +2,14 @@ const headText = document.getElementById('headText')
 const example = document.getElementById('example')
 const nextBtn = document.getElementById('next')
 const resetBtn = document.getElementById('resetBtn')
+
 var i = 0;
 
+const allSymbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+let symbols = []
+// const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+// console.log(symbols[2])
+// let keySymbol = symbols[Math.floor(Math.random()*(symbols.length))]
 
 const pages = [
     {
@@ -45,10 +51,8 @@ const pages = [
 },
 ]
 
-const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
-// console.log(symbols[2])
-let keySymbol = symbols[Math.floor(Math.random() * 9)]
-console.log(keySymbol)
+
+// console.log(keySymbol)
 
 
 function increment(){
@@ -97,21 +101,33 @@ increment()
 
 })
 
+
+
+
 function answerKey(){
-    for(i = 0; i < 99; i++){
-        if (i % 9 === 0){
-            
-        }
+    for(i = 1; i < 101; i++){
+        let x = Math.floor(Math.random()*symbols.length)
         const key = document.createElement('p')
-        headText.appendChild(key)
-        key.innerText = i
+        
+        if (i % 9 === 0){
+            // symbols[0]
+            
+            headText.appendChild(key)
+            key.innerText = i + symbols[0]
+        } 
+        else {
+            // symbols[x]
+            headText.appendChild(key)
+            key.innerText = i + symbols[x]
+        }
+        
+        
+        // key.innerText = i + symbols[x]
     }
+    // console.log(symbols[keySymbol])
     // update()
 
 }
-// answerKey()
-
 
 
 update()
-// nextBtn.style.display = 'none';

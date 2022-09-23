@@ -19,7 +19,8 @@ p {
 }
 
 .headContainer {
-    height: 50vh;
+    height: 700px;
+    margin: 30px;
 }
 
 .text-info {
@@ -38,6 +39,10 @@ p {
     height: 275px;
 }
 
+.bi-arrow-counterclockwise {
+    font-size: 30px;
+}
+
 #next {
     width: 275px;
     height: 60px;
@@ -45,8 +50,9 @@ p {
 
 #resetBtn {
     background-color: white;
-    border-radius: 30px;
+    /* border-radius: 30px; */
+    font-size: 17px;
     margin: 20px;
-    /* width: 4vw; */
-    /* height: 7.5vh; */
+    width: 4.5vw;
+    height: 7.5vh;
 }
