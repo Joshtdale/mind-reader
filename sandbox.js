@@ -5,9 +5,10 @@ const resetBtn = document.getElementById('resetBtn')
 
 var i = 0;
 
-const allSymbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
-let symbols = []
-// const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+// const allSymbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+
+// let symbols = []
+const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
 // console.log(symbols[2])
 // let keySymbol = symbols[Math.floor(Math.random()*(symbols.length))]
 
@@ -54,18 +55,6 @@ const pages = [
 
 // console.log(keySymbol)
 
-
-function increment(){
-    i++;
-    console.log(i)
-    update()
-}
-
-function reset(){
-    i = 0;
-    update()
-}
-
 function update(){
     
     if (i === 0 || i === 5){
@@ -82,27 +71,16 @@ function update(){
 
 }
 
-resetBtn.addEventListener('click', () => {
-    if (i === 0){
-        increment()
-    } else {
-        reset()
-    }
-})
-
-nextBtn.addEventListener('click', () => {
-    
-    if (i > 0){
-increment()
-}
-    if (i === 5){
-    answerKey()
+function increment(){
+    i++;
+    // console.log(i)
+    update()
 }
 
-})
-
-
-
+function reset(){
+    i = 0;
+    update()
+}
 
 function answerKey(){
     for(i = 1; i < 101; i++){
@@ -128,6 +106,32 @@ function answerKey(){
     // update()
 
 }
+
+resetBtn.addEventListener('click', () => {
+    if (i === 0){
+        increment()
+    } else {
+        reset()
+    }
+})
+
+
+
+nextBtn.addEventListener('click', () => {
+    
+    if (i > 0){
+increment()
+}
+    if (i === 4){
+    answerKey()
+}
+
+})
+
+
+
+
+
 
 
 update()
