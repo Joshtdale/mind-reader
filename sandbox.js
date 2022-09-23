@@ -10,7 +10,7 @@ var i = 0;
 // let symbols = []
 const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
 // console.log(symbols[2])
-// let keySymbol = symbols[Math.floor(Math.random()*(symbols.length))]
+let keySymbol = symbols[Math.floor(Math.random()*(symbols.length))]
 
 const pages = [
     {
@@ -45,9 +45,9 @@ const pages = [
     resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
-    headText: '!',
+    headText: keySymbol,
     nextBtn: '',
-    exampleText: 'Your symbol is: !',
+    exampleText: 'Your symbol is:' + keySymbol,
     resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 ]
@@ -100,7 +100,7 @@ function answerKey(){
             // symbols[0]
             
             headText.appendChild(key)
-            key.innerText = n + ' - ' + symbols[0]
+            key.innerText = n + ' - ' + keySymbol
         } 
         else {
             // symbols[x]
