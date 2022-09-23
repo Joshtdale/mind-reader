@@ -2,8 +2,15 @@ const headText = document.getElementById('headText')
 const example = document.getElementById('example')
 const nextBtn = document.getElementById('next')
 const resetBtn = document.getElementById('resetBtn')
+
 var i = 0;
 
+// const allSymbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+
+// let symbols = []
+const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
+// console.log(symbols[2])
+// let keySymbol = symbols[Math.floor(Math.random()*(symbols.length))]
 
 const pages = [
     {
@@ -45,28 +52,14 @@ const pages = [
 },
 ]
 
-const symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(']
-// console.log(symbols[2])
-let keySymbol = symbols[Math.floor(Math.random() * 9)]
-console.log(keySymbol)
 
-
-function increment(){
-    i++;
-    console.log(i)
-    update()
-}
-
-function reset(){
-    i = 0;
-    update()
-}
+// console.log(keySymbol)
 
 function update(){
     
     if (i === 0 || i === 5){
         nextBtn.style.display = 'none';
-        console.log('i = 0')
+        // console.log('i = 0')
     } else {
     nextBtn.style.display = 'block';
 }
@@ -78,6 +71,42 @@ function update(){
 
 }
 
+function increment(){
+    i++;
+    // console.log(i)
+    update()
+}
+
+function reset(){
+    i = 0;
+    update()
+}
+
+function answerKey(){
+    for(i = 1; i < 101; i++){
+        let x = Math.floor(Math.random()*symbols.length)
+        const key = document.createElement('p')
+        
+        if (i % 9 === 0){
+            // symbols[0]
+            
+            headText.appendChild(key)
+            key.innerText = i + symbols[0]
+        } 
+        else {
+            // symbols[x]
+            headText.appendChild(key)
+            key.innerText = i + symbols[x]
+        }
+        
+        
+        // key.innerText = i + symbols[x]
+    }
+    // console.log(symbols[keySymbol])
+    // update()
+
+}
+
 resetBtn.addEventListener('click', () => {
     if (i === 0){
         increment()
@@ -86,32 +115,23 @@ resetBtn.addEventListener('click', () => {
     }
 })
 
+
+
 nextBtn.addEventListener('click', () => {
     
     if (i > 0){
 increment()
 }
-    if (i === 5){
+    if (i === 4){
     answerKey()
 }
 
 })
 
-function answerKey(){
-    for(i = 0; i < 99; i++){
-        if (i % 9 === 0){
-            
-        }
-        const key = document.createElement('p')
-        headText.appendChild(key)
-        key.innerText = i
-    }
-    // update()
 
-}
-// answerKey()
+
+
 
 
 
 update()
-// nextBtn.style.display = 'none';
