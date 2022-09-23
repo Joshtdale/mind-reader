@@ -70,7 +70,7 @@ function update(){
     
     if (i === 0 || i === 5){
         nextBtn.style.display = 'none';
-        console.log('i = 0')
+        // console.log('i = 0')
     } else {
     nextBtn.style.display = 'block';
 }
