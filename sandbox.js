@@ -108,12 +108,7 @@ function answerKey(){
             key.innerText = n + ' - ' + symbols[x]
         }
         
-        
-        // key.innerText = i + symbols[x]
     }
-    // console.log(symbols[keySymbol])
-    // update()
-
 }
 
 resetBtn.addEventListener('click', () => {
