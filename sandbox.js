@@ -45,9 +45,9 @@ const pages = [
     resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 {
-    headText: '',
+    headText: '!',
     nextBtn: '',
-    exampleText: 'Your symbol is:',
+    exampleText: 'Your symbol is: !',
     resetBtn: '<i class="bi bi-arrow-counterclockwise"></i>'
 },
 ]
@@ -72,10 +72,15 @@ function update(){
 }
 
 function increment(){
+    // if (i === 3){
+    //     i = 5
+    //     console.log('i = 4')
+    // } else {
     i++;
-    // console.log(i)
+    console.log(i)
     update()
-}
+    }
+// }
 
 function reset(){
     i = 0;
@@ -83,20 +88,24 @@ function reset(){
 }
 
 function answerKey(){
-    for(i = 1; i < 101; i++){
+    for(n = 0; n < 100; n++){
         let x = Math.floor(Math.random()*symbols.length)
         const key = document.createElement('p')
         
-        if (i % 9 === 0){
+        if (n < 10){
+            n = '0' + n
+        }
+
+        if (n % 9 === 0){
             // symbols[0]
             
             headText.appendChild(key)
-            key.innerText = i + symbols[0]
+            key.innerText = n + ' - ' + symbols[0]
         } 
         else {
             // symbols[x]
             headText.appendChild(key)
-            key.innerText = i + symbols[x]
+            key.innerText = n + ' - ' + symbols[x]
         }
         
         
@@ -124,6 +133,7 @@ increment()
 }
     if (i === 4){
     answerKey()
+    
 }
 
 })
